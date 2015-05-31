@@ -1,10 +1,10 @@
 {
-  "name": "Base SmartNinja Project",
+  "name": "eshop template",
   "version": "0.1.0",
   "authors": [
-    "Miha Susnik <mihec.susnik@gmail.com>"
+    "Grega Tratnik <grega.tratnik@gmail.com>"
   ],
-  "description": "Base template for the SmartNinja project",
+  "description": "eshop template",
   "license": "MIT",
   "ignore": [
     "**/.*",
