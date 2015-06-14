@@ -1,0 +1,28 @@
+<div class="well container">
+	<div>
+	  <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+	</div>
+	<div ng-repeat="item in categoryItems.slice((currentPage-1)*10,currentPage*10)" autoscroll="true">
+		<div class="well col-xs-12" id="item{{item.id}}" ng-show="{{loc}}=={{item.id}}">
+			<p><h3>{{item.name}} {{item.price}} €</h3> </p>   
+			<div class="col-xs-4">
+				<img ng-src="{{item.image}}"/>
+				</br>
+				{{item.tagline}}
+			</div>
+			<div class="col-xs-8">
+			<div class="row">{{item.description}}</div>
+			<div class="row">
+			    <button class="btn btn-primary" ng-click="addToBasket(item)">
+                     Add to basket!
+                </button>
+			</div>
+			</div>
+		</div>
+		{{scrollPage($last)}}
+	</div>
+	<div class="text-center" ng-show="!{{loc}}">
+		<pagination ng-model="currentPage" total-items="categoryItems.length"></pagination>
+	</div>
+</div>
+

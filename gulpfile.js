@@ -13,7 +13,7 @@ gulp.task('move', function(){
 	//	Pipe it and store it in the dist folder
 	.pipe(gulp.dest('./dist'))
 	//	Notify the user
-	.pipe(notify('Moved index.html'));
+	//.pipe(notify('Moved index.html'));
 
 
 	// Set the source. You can exclude files with !
@@ -21,7 +21,7 @@ gulp.task('move', function(){
 	// Remove any relative folders, subfolders
 	.pipe(flatten())
 	.pipe(gulp.dest('./dist/templates'))
-	.pipe(notify('Moved templates'));
+	//.pipe(notify('Moved templates'));
 
 });
 
@@ -32,7 +32,7 @@ gulp.task('scripts', function(){
 	// Concat all the js files into a single all.js file
 	.pipe(concat('all.js'))
 	.pipe(gulp.dest('./dist/js'))
-	.pipe(notify('Generated all.js'));
+	//.pipe(notify('Generated all.js'));
 
 });
 

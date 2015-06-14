@@ -3,7 +3,7 @@
 			<slide ng-repeat="slide in items | limitTo:10" >
 				<img ng-src="{{slide.image}}" style="margin:auto;">
 				<div class="carousel-caption">
-					<a ui-sref="izdelek({id:slide.categoryId,item:slide.id})">{{slide.name}} </a><small>{{slide.price | currency: "€"}}</small>
+					<a ui-sref="product({id:slide.categoryId,item:slide.id})">{{slide.name}} </a><small>{{slide.price | currency: "€"}}</small>
 				</div>
 			</slide>
 		</carousel>    

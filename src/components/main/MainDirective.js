@@ -1,4 +1,4 @@
-angular.module('app').directive('telo', function() {
+angular.module('app').directive('main', function() {
     return {
         template: '<ui-view></ui-view>'
     };
